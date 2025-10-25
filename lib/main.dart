@@ -1,23 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'app/controller/offline_video_controller.dart';
+import 'app/screen/offline_video_screen.dart';
+import 'package:get/get.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 import 'app/screen/video_player.dart';
 
-void main() {
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  // open box to store offline video metadata
+  await Hive.openBox('offlineVideos');
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    // Make the controller global (so it can be used across screens)
+    Get.put(OfflineVideoController());
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: YouTubePlaylistScreen(),
+      title: 'Offline Video Demo',
+      home:  YouTubePlaylistScreen(),
     );
   }
 }
+
 
 class YouTubePlaylistUI extends StatefulWidget {
   const YouTubePlaylistUI({super.key});

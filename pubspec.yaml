@@ -38,6 +38,13 @@ dependencies:
   flutter_inappwebview: ^6.1.0
   cached_network_image: ^3.4.1
   get:
+  dio: ^5.0.0     # for downloading
+  path_provider: ^2.0.0
+  video_player: ^2.5.0
+  hive:
+  hive_flutter:
+  youtube_explode_dart: ^2.5.2
+
 
 
 

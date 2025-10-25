@@ -7,6 +7,10 @@ class YouTubeController extends GetxController {
   // Playlist
   final playlist = <Map<String, String>>[
     {
+      "url": "https://youtu.be/0rv7SVNdlco?si=m-WCVLs67Nx70umm",
+      "title": "Flutter Tutorial 01",
+      "channel": "Flutter Channel",
+    }, {
       "url": "https://www.youtube.com/watch?v=bxDFCGGhX8E",
       "title": "Flutter Tutorial 1",
       "channel": "Flutter Channel",
@@ -21,6 +25,16 @@ class YouTubeController extends GetxController {
       "title": "Flutter Tutorial 3",
       "channel": "Flutter Channel",
     },
+
+    // [
+    //   {
+    //     "title": "Flutter Tutorial 1",
+    //     "youtubeUrl": "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
+    //     "videoUrl": "https://yourserver.com/videos/flutter1.mp4",
+    //     "thumbnail": "https://yourserver.com/thumbnails/flutter1.png"
+    //   }
+    // ]
+
   ];
 
   // Current index
