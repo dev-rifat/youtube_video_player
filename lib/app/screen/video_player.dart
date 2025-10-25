@@ -89,7 +89,7 @@ class YouTubePlaylistScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           Icon(Icons.arrow_downward_rounded),
-                          Text("Downloading... ${(offlineController.downloadProgress.value * 100).toStringAsFixed(0)}%"),
+                         // Text("Downloading... ${(offlineController.downloadProgress.value * 100).toStringAsFixed(0)}%"),
                         ],
                       ),
                     ),
@@ -144,9 +144,10 @@ class YouTubePlaylistScreen extends StatelessWidget {
                   width: 160,
                   margin: const EdgeInsets.symmetric(horizontal: 8),
                   decoration: BoxDecoration(
-                    border: controller.currentIndex.value == index
-                        ? Border.all(color: Colors.red, width: 2)
-                        : null,
+                    // border: controller.currentIndex.value == index
+                    //     ? Border.all(color: Colors.red, width: 2)
+                    //     : null,
+                    color: controller.currentIndex.value == index?Colors.grey.shade200:Colors.white,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Row(
